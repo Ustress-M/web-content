@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title> 4차 산업혁명과 융합교육 수업 </title>
+  <meta charset="utf-8">
+</head>
+
+<header> <h1> 4차 산업혁명과 융합교육 <br> 4차 산업혁명과 피지컬컴퓨팅 </h1> </header>
+
+<body>
+<section>
+  <nav role="navigation" id="top_Menu">
+    <ul id="navLiMenu"></ul>
+  </nav>
+
+  <script> //메뉴 스크립트로 생성하기
+    var menuList = ['🏠홈으로 돌아가기','ℹ️4차 산업혁명과 교육','🖥️피지컬 컴퓨팅장치','🤔생각 및 돌아보기'];
+    var menuUrl = ['index.html', 'ir4.html','page3.html', 'page4.html'];
+    var menuTarget = ['_self', 'show_contents','show_contents','show_contents'];
+
+    for (var i = 0; i < menuList.length; i++)
+    {
+      var menuItem = document.createElement('li');
+      menuItem.setAttribute("class", "menu_Link");
+      var menuItemAtag = document.createElement('a');
+      menuItemAtag.href = menuUrl[i];
+      menuItemAtag.target = menuTarget[i];
+      menuItemAtag.text = menuList[i];
+
+      menuItem.appendChild(menuItemAtag);
+      document.getElementById('navLiMenu').appendChild(menuItem);
+    }
+    </script>
+
+  <article>
+    <h1 >이 사이트는 AI융합교육전공 '4차 산업혁명과 융합교육'과목에서 테스트 할 용도로 만들어진 페이지 입니다.</h1>
+
+    <p> 사이트 이용 방법은 다음과 같습니다.
+      맨 위에 있는 <u style="color:red"> 메뉴</u>버튼을 눌러 원하는 동작을 선택해주세요. 
+      <br>해당 메뉴를 선택한다면 아래 Frame에 해당 정보가 표시됩니다.
+
+    </p>
+
+  <iframe id="fr01" name="show_contents" height=100%; style="border-radius: 1em;"></iframe> 
+
+  </article>
+</section>
+
+
+
+<footer>
+  이 사이트는 충북대학교 '4차 산업혁명과 융합교육' 과제물과 관련하여 작성된 페이지 입니다. 
+  
+  <br>🧑‍💻 : 박민수 | 📧: mbak@korea.kr | 📞 : 010-4665-1123
+</footer>
+
+</body>
+</html>
+
+

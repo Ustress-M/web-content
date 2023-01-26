@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+</head>
+
+<header> </header>
+
+<body>
+<section>
+  <script>
+    function chkAns1(self){
+      var user_ans=self.value;
+      if (user_ans == '센서' || user_ans =='마이크로컨트롤러' || user_ans =='구동기') {
+        alert('정답입니다.'); }
+      else {
+        alert('틀렸습니다 다시 생각하세요'); }
+    }
+      
+    function chkAns2(){
+      if(form2.ansQ2[2].checked==true) 
+      {
+        alert('정답입니다.');
+      }
+      else 
+      {
+        alert('오답입니다.');
+      }
+    }
+  </script>
+
+
+
+  <article>
+    <p>다음 그림을 참고하여 피지컬 컴퓨팅 장치를 구상해보자.</p>
+
+    <!--피지컬 컴퓨팅 장치 이미지 넣은 부분-->
+    <div id="img_show" style="text-align: center;">
+      <img src="physical4.png" alt="피지컬 컴퓨팅" style="width: 100%;">
+      <strong>그림 : 피지컬 컴퓨팅 장치 예시</strong>
+    </div>
+
+    <br><br>
+
+    <table border="1" style="width: 100%; height: 100%; font-size: 2em;">
+      <th>만들고 싶은 장치 이름</th>
+      <th>장치에 대한 세부 설명(장치가 하는 일 및 구성 등)</th>
+      <tr><!-- 첫번째 줄 시작 -->
+          <td>ex) 엄크감지기 </td>
+          <td>ex) 엄마아빠가 문 근처에 있으면 알려주는 장치 </td>
+      </tr><!-- 첫번째 줄 끝 -->
+      <tr><!-- 두번째 줄 시작 -->
+        <td> <input type="text" class="user_think"> </td>
+        <td> <input type="text" class="user_think"> </td>
+      </tr><!-- 두번째 줄 끝 -->
+      <tr><!-- 세번째 줄 시작 -->
+        <td> <input type="text" class="user_think"> </td>
+        <td> <input type="text" class="user_think"> </td>
+      </tr><!-- 세번째 줄 끝 -->
+      <tr><!-- 네번째 줄 시작 -->
+        <td> <input type="text" class="user_think"> </td>
+        <td> <input type="text" class="user_think"> </td>
+      </tr><!-- 네번째 줄 끝 -->
+    </table>
+ 
+      <a style = "font-size: 30px;" href="mailto:pmsco1007@gmail.com? subject=정보 내용 제출합니다. "> 메일로 제출하기 </a>
+
+      <br><br>
+    <form name="form1">
+      <label>문1. 피지컬 컴퓨팅 장치의 구성요소 중 하나를 입력해주세요. </label><br>
+
+      <input type="text" id="q1" onchange="chkAns1(this)">
+      <br><br>
+    </form>
+
+  
+    <form name="form2">
+      <label>문2. 다음 중 센서나 구동기의 종류가 아닌 것은? </label><br>
+      <input type="radio" value="서보모터" name="ansQ2" >
+      <label for="서보모터"> 서보모터 </label><br>
+
+      <input type="radio" value="초음파 센서(HC-02)" name="ansQ2" >
+      <label for="초음파 센서(HC-02)"> 초음파 센서(HC-02) </label><br>
+
+      <input type="radio" value="라즈베리파이" name="ansQ2" >
+      <label for="라즈베리파이"> 라즈베리파이 </label><br>
+
+      <input type="radio" value="CDS" name="ansQ2" >
+      <label for="CDS"> CDS </label><br>
+
+      <input type="button" id = "chkAnsBtn1" value="정답 확인하기" onclick="chkAns2()">
+    </form>
+    
+    </article>
+  </section>
+</body>
+</html>
+
